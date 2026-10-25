@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio personal | Paulina Jelves</title>
+
+  <!-- Conecta este HTML con el archivo CSS ubicado en la misma carpeta. -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tipografías: puedes reemplazarlas desde Google Fonts y en el CSS. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER: portada y barra superior de navegación. -->
+  <header id="inicio" class="portada">
+    <div class="barra-superior">
+      <div class="nombre-sitio">Portafolio personal</div>
+      <div class="navegacion">
+        <!-- href="#sobre-mi" dirige al elemento con id="sobre-mi". -->
+        <a href="#sobre-mi">Sobre mí</a>
+        <!-- Reemplaza el correo de ejemplo por tu dirección real. -->
+        <a href="mailto:tu-correo@ejemplo.com">Contacto ↗</a>
+      </div>
+    </div>
+
+    <!-- Título grande con tipografía caligráfica. -->
+    <div class="titulo-portada">Paulina Jelves</div>
+
+    <!-- Línea horizontal inferior presente en el wireframe. -->
+    <div class="linea-portada"></div>
+  </header>
+
+  <!-- Contenedor de la sección de proyectos. -->
+  <div id="proyectos" class="seccion-proyectos">
+    <div class="encabezado-proyectos">
+      <div class="introduccion-proyectos">
+        <div class="etiqueta-seccion">PROGRAMACIÓN CREATIVA</div>
+        <div class="titulo-seccion">Proyectos personales</div>
+        <div class="subtitulo-seccion">Un recorrido por mis exploraciones visuales a través del código.</div>
+      </div>
+      <div class="resumen-proyectos">
+        <div class="marca-p5">p5.js</div>
+        <div class="cantidad-proyectos">5 proyectos seleccionados</div>
+      </div>
+    </div>
+
+    <!-- Las cinco tarjetas mantienen el mismo formato: cabecera visual + información. -->
+    <div class="grilla-proyectos">
+
+      <!-- PROYECTO 1: coloca su imagen en el atributo src comentado. -->
+      <div id="proyecto-1" class="tarjeta-proyecto">
+        <div class="visual-proyecto tono-arena">
+          <!-- Para usar una imagen: quita los comentarios y cambia la ruta.
+          <img class="imagen-proyecto" src="imagenes/three-cheers.jpg" alt="Vista de Three Cheers for Sweet Revenge">
+          -->
+          <div class="visual-arriba"><span>ESTUDIO EN CÓDIGO</span><span>{ }</span></div>
+          <div class="visual-titulo">Three Cheers for<br>Sweet Revenge</div>
+          <div class="visual-pie">Portadilla tipográfica</div>
+        </div>
+        <div class="contenido-proyecto">
+          <div class="metadatos"><span>ENCARGO 1</span><span>p5.js</span></div>
+          <div class="nombre-proyecto">Three Cheers for<br>Sweet Revenge</div>
+          <div class="descripcion-proyecto">Reproducción de la portada de My Chemical Romance.</div>
+          <div class="autoria-proyecto">Paulina Jelves</div>
+          <a class="enlace-proyecto" href="https://wiki.ead.pucv.cl/Encargo_1_IE_-_Three_cheers_for_sweet_revenge_-_Paulina_Jelves" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+        </div>
+      </div>
+
+      <!-- PROYECTO 2 -->
+      <div id="proyecto-2" class="tarjeta-proyecto">
+        <div class="visual-proyecto tono-rosa">
+          <!-- <img class="imagen-proyecto" src="imagenes/explosion-colorida.jpg" alt="Vista de Explosión colorida"> -->
+          <div class="visual-arriba"><span>ESTUDIO EN CÓDIGO</span><span>{ }</span></div>
+          <div class="visual-titulo">Explosión<br>colorida</div>
+          <div class="visual-pie">Portadilla tipográfica</div>
+        </div>
+        <div class="contenido-proyecto">
+          <div class="metadatos"><span>ENCARGO 2</span><span>p5.js</span></div>
+          <div class="nombre-proyecto">Explosión colorida</div>
+          <div class="descripcion-proyecto">Proyecto de programación creativa en p5.js.</div>
+          <div class="autoria-proyecto">Paulina Jelves</div>
+          <a class="enlace-proyecto" href="https://wiki.ead.pucv.cl/Encargo_2_IE_-_Paulina_Jelves" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+        </div>
+      </div>
+
+      <!-- PROYECTO 3 -->
+      <div id="proyecto-3" class="tarjeta-proyecto">
+        <div class="visual-proyecto tono-arena">
+          <!-- <img class="imagen-proyecto" src="imagenes/bosque-floreciente.jpg" alt="Vista de Bosque floreciente"> -->
+          <div class="visual-arriba"><span>ESTUDIO EN CÓDIGO</span><span>{ }</span></div>
+          <div class="visual-titulo">Bosque<br>floreciente</div>
+          <div class="visual-pie">Portadilla tipográfica</div>
+        </div>
+        <div class="contenido-proyecto">
+          <div class="metadatos"><span>ENCARGO 4</span><span>p5.js</span></div>
+          <div class="nombre-proyecto">Bosque floreciente</div>
+          <div class="descripcion-proyecto">Exploración visual realizada con código en p5.js.</div>
+          <div class="autoria-proyecto">Paulina Jelves</div>
+          <a class="enlace-proyecto" href="https://wiki.ead.pucv.cl/Encargo_4_IE_-_Paulina_Jelves" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+        </div>
+      </div>
+
+      <!-- PROYECTO 4 -->
+      <div id="proyecto-4" class="tarjeta-proyecto">
+        <div class="visual-proyecto tono-rosa">
+          <!-- <img class="imagen-proyecto" src="imagenes/confeti.jpg" alt="Vista de Confeti"> -->
+          <div class="visual-arriba"><span>ESTUDIO EN CÓDIGO</span><span>{ }</span></div>
+          <div class="visual-titulo">Confeti</div>
+          <div class="visual-pie">Portadilla tipográfica</div>
+        </div>
+        <div class="contenido-proyecto">
+          <div class="metadatos"><span>ENCARGO 5</span><span>p5.js</span></div>
+          <div class="nombre-proyecto">Confeti</div>
+          <div class="descripcion-proyecto">Proyecto de programación creativa en p5.js.</div>
+          <div class="autoria-proyecto">Paulina Jelves</div>
+          <a class="enlace-proyecto" href="https://wiki.ead.pucv.cl/Encargo_5_IE_-_Paulina_Jelves" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+        </div>
+      </div>
+
+      <!-- PROYECTO 5 -->
+      <div id="proyecto-5" class="tarjeta-proyecto">
+        <div class="visual-proyecto tono-arena">
+          <!-- <img class="imagen-proyecto" src="imagenes/atardecer.jpg" alt="Vista de Atardecer interactivo"> -->
+          <div class="visual-arriba"><span>ESTUDIO EN CÓDIGO</span><span>{ }</span></div>
+          <div class="visual-titulo">Atardecer<br>interactivo</div>
+          <div class="visual-pie">Portadilla tipográfica</div>
+        </div>
+        <div class="contenido-proyecto">
+          <div class="metadatos"><span>ENTREGA U1</span><span>p5.js</span></div>
+          <div class="nombre-proyecto">Atardecer<br>interactivo</div>
+          <div class="descripcion-proyecto">Nubes y oleaje que responden a la proximidad del cursor.</div>
+          <div class="autoria-proyecto">Natalia Vilches y Paulina Jelves</div>
+          <a class="enlace-proyecto" href="https://wiki.ead.pucv.cl/Atardecer_Interactivo_-_Entrega_U1_IE" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPOTIFY: sección nueva debajo de los cinco proyectos.
+       El número después de /playlist/ identifica tu lista de reproducción.
+       No incluimos el parámetro pt del enlace compartido, porque no se necesita
+       para mostrar el reproductor integrado. -->
+  <div id="spotify" class="seccion-spotify">
+    <div class="etiqueta-seccion">MÚSICA PERSONAL</div>
+    <div class="titulo-seccion">Mis canciones favoritas</div>
+    <div class="reproductor-spotify">
+      <!-- iframe: muestra contenido de Spotify dentro de esta página.
+           src: dirección del reproductor. width y height: tamaño.
+           loading="lazy": carga el reproductor cuando está cerca de la pantalla. -->
+      <iframe
+        title="Playlist de Spotify de Paulina Jelves"
+        src="https://open.spotify.com/embed/playlist/3zOF98b9GW2Nazth5P3yev?utm_source=generator"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- El wireframe no incluye una sección "Sobre mí" ni pie de página.
+       Por eso no añadimos ninguna. Si deseas que el enlace superior funcione
+       dentro de esta página, tendrás que indicar dónde ubicar esa sección. -->
+</body>
+</html>
