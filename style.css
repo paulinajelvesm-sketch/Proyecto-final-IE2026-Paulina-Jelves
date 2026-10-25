@@ -1,0 +1,166 @@
+/* ============================================================
+   COLORES Y TIPOGRAFÍAS GLOBALES
+   Cambia aquí los valores para modificar toda la página.
+   ============================================================ */
+:root {
+  --fondo: #f8f5ee;       /* crema de fondo */
+  --burdeos: #78414b;     /* letras principales */
+  --texto-suave: #a58c87; /* descripciones y textos pequeños */
+  --borde: #e3d8d1;       /* líneas finas */
+  --arena: #f0ebe2;       /* tarjetas claras */
+  --rosa: #f0e5e3;        /* tarjetas rosadas */
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+  --caligrafica: "Pinyon Script", cursive;
+}
+
+/* box-sizing evita que el padding agrande el ancho definido. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; /* elimina el margen predeterminado del navegador */
+  background: var(--fondo);
+  color: var(--burdeos);
+}
+a { color: inherit; text-decoration: none; }
+
+/* ============================================================
+   PORTADA / HEADER (primer wireframe)
+   ============================================================ */
+.portada {
+  position: relative; /* permite posicionar la línea inferior */
+  min-height: 460px;
+  padding: 30px 4.4% 26px;
+}
+.barra-superior {
+  display: flex; /* sitúa título pequeño a la izquierda y menú a la derecha */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.nombre-sitio { font: 500 21px/1 var(--serif); }
+.navegacion { display: flex; gap: 29px; padding-top: 7px; }
+.navegacion a { font: 400 10px/1.4 var(--sans); }
+.navegacion a:hover, .enlace-proyecto:hover { text-decoration: underline; }
+.titulo-portada {
+  margin-top: 19px;
+  text-align: center;
+  font: 400 clamp(100px, 13.7vw, 210px)/1 var(--caligrafica);
+  white-space: nowrap; /* mantiene el nombre en una sola línea en escritorio */
+}
+.linea-portada {
+  position: absolute;
+  bottom: 24px;
+  left: 4.4%;
+  right: 4.4%;
+  border-top: 1px solid var(--borde);
+}
+
+/* ============================================================
+   CABECERA DE PROYECTOS (segundo wireframe)
+   ============================================================ */
+.seccion-proyectos { padding: 18px 4.4% 40px; }
+.encabezado-proyectos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 26px;
+  gap: 24px;
+}
+.etiqueta-seccion {
+  font: 600 9px/1.4 var(--sans);
+  letter-spacing: 1.7px;
+  margin-bottom: 6px;
+}
+.titulo-seccion { font: 400 clamp(40px, 4vw, 54px)/1 var(--serif); }
+.subtitulo-seccion { font: 400 17px/1.35 var(--serif); color: var(--texto-suave); margin-top: 8px; }
+.resumen-proyectos { text-align: right; padding-bottom: 2px; flex-shrink: 0; }
+.marca-p5 { font: italic 30px/1 var(--serif); }
+.cantidad-proyectos { font: 400 9px/1.5 var(--sans); color: var(--texto-suave); margin-top: 5px; }
+
+/* ============================================================
+   GRILLA: cinco tarjetas en una fila como en el wireframe
+   ============================================================ */
+.grilla-proyectos {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 15px;
+}
+.tarjeta-proyecto {
+  border: 1px solid var(--borde);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.visual-proyecto {
+  position: relative; /* necesario para colocar imagen opcional */
+  height: 162px;
+  padding: 14px 13px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.tono-arena { background: var(--arena); }
+.tono-rosa { background: var(--rosa); }
+
+/* Al activar una etiqueta <img> en HTML, la imagen llena la cabecera.
+   object-fit: cover recorta lo necesario sin deformar la imagen. */
+.imagen-proyecto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.visual-arriba, .visual-titulo, .visual-pie { position: relative; z-index: 1; }
+.visual-arriba { display: flex; justify-content: space-between; gap: 6px; font: 500 7px/1.3 var(--sans); letter-spacing: .5px; }
+.visual-titulo { font: italic 28px/.95 var(--serif); }
+.visual-pie { font: 400 7px/1.4 var(--sans); color: var(--texto-suave); }
+
+/* Parte inferior de cada tarjeta. */
+.contenido-proyecto {
+  padding: 14px 13px 12px;
+  min-height: 204px;
+  display: flex;
+  flex-direction: column;
+}
+.metadatos { display: flex; justify-content: space-between; gap: 4px; font: 500 8px/1.3 var(--sans); color: var(--texto-suave); letter-spacing: .5px; }
+.metadatos span:last-child { font: italic 12px/1 var(--serif); letter-spacing: 0; }
+.nombre-proyecto { font: 400 22px/1.05 var(--serif); margin: 12px 0 10px; }
+.descripcion-proyecto { font: 400 10px/1.35 var(--sans); color: var(--texto-suave); min-height: 40px; }
+.autoria-proyecto { font: 400 8px/1.4 var(--sans); color: var(--texto-suave); margin-top: 7px; }
+.enlace-proyecto {
+  display: block;
+  margin-top: auto; /* empuja el enlace al fondo de todas las tarjetas */
+  padding-top: 11px;
+  border-top: 1px solid var(--borde);
+  font: 400 10px/1.4 var(--sans);
+}
+
+/* ============================================================
+   ADAPTACIÓN A PANTALLAS PEQUEÑAS
+   No añade ni elimina elementos: reorganiza las tarjetas.
+   ============================================================ */
+@media (max-width: 850px) {
+  .portada { min-height: 350px; }
+  .titulo-portada { font-size: clamp(70px, 14vw, 125px); margin-top: 45px; }
+  .grilla-proyectos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .visual-proyecto { height: 210px; }
+}
+@media (max-width: 520px) {
+  .portada { min-height: 290px; padding-top: 24px; }
+  .nombre-sitio { font-size: 17px; }
+  .navegacion { gap: 12px; padding-top: 3px; }
+  .navegacion a { font-size: 9px; }
+  .titulo-portada { font-size: 14vw; margin-top: 70px; }
+  .encabezado-proyectos { align-items: flex-start; }
+  .titulo-seccion { font-size: 35px; }
+  .subtitulo-seccion { font-size: 14px; }
+  .marca-p5 { font-size: 22px; }
+  .cantidad-proyectos { font-size: 8px; }
+  .grilla-proyectos { grid-template-columns: 1fr; }
+  .visual-proyecto { height: 240px; }
+  .visual-titulo { font-size: 38px; }
+  .contenido-proyecto { min-height: 200px; }
+}
